@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import fotoHero from "@/imports/foto-hero.jpg";
 
 function useIntersection(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
@@ -201,9 +202,10 @@ export default function App() {
         {/* Hero image */}
         <div className="absolute right-0 top-0 bottom-0 w-full md:w-3/5">
           <img
-            src="https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=1200&h=900&fit=crop&auto=format"
-            alt="Imagem de paródia política — fotografia editorial fictícia"
-            className="w-full h-full object-cover object-center"
+            src={fotoHero}
+            alt="Foto usada em tom de paródia — conteúdo fictício e humorístico"
+            className="w-full h-full object-cover"
+            style={{ objectPosition: "50% 30%" }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-gray-950 via-gray-950/40 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-gray-950/20" />
